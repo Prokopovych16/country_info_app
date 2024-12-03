@@ -1,4 +1,3 @@
-// Middleware to filter only borders
 const filterBorders = (req, res, next) => {
   const sendData = res.json;
 

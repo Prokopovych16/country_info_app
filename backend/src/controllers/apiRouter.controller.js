@@ -16,11 +16,9 @@ const getCountryInfo = async (req, res) => {
 const getCountryFlag = async (req, res) => {
   const { countryCode } = req.params;
 
-  // Fetch the flags data
   const response = await axios.get(process.env.LINK_COUNTRIES_IMG);
   const flags = response.data;
 
-  // Find the flag matching the given countryCode
   const matchingFlag = flags.data.find((flag) => flag.iso2 === countryCode);
 
   if (matchingFlag) {
