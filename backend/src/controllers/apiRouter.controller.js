@@ -22,7 +22,6 @@ const getCountryFlag = async (req, res) => {
 
   // Find the flag matching the given countryCode
   const matchingFlag = flags.data.find((flag) => flag.iso2 === countryCode);
-  console.log(matchingFlag);
 
   if (matchingFlag) {
     res.json({
@@ -45,7 +44,6 @@ const getCountryPopulation = async (req, res) => {
   const population = response.data;
 
   const matchingPopulation = population.data.find((pop) => pop.iso3 === countryCode);
-  console.log(matchingPopulation);
 
   if (matchingPopulation) {
     res.json({
