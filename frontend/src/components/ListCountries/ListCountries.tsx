@@ -36,8 +36,15 @@ export const ListCountries = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {countries.map((country) => {
-        return <Link key={country.name} to={`/country/${country.countryCode}`} className="flex-auto w-full sm:w-1/3 md:w-1/4 bg-gray-300 rounded-lg p-3 hover:shadow-[4px_4px_10px_rgba(0,0,0,0.1)] transition-all duration-150">{country.countryCode} - {country.name}</Link>
+        return (
+          <Link
+            key={country.name}
+            to={`/country/${country.countryCode}`}
+            className="flex-auto w-full sm:w-1/3 md:w-1/4 bg-gray-300 rounded-lg p-3 hover:shadow-[4px_4px_10px_rgba(0,0,0,0.1)] transition-all duration-150">
+            {country.countryCode} - {country.name};
+          </Link>
+        );
       })}
     </div>
   );
-}
+};

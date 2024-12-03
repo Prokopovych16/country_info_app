@@ -7,5 +7,5 @@ import React from 'react';
 createRoot(document.getElementById('root') as HTMLElement).render(
   <Router>
     <App />
-  </Router>
+  </Router>,
 );
