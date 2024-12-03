@@ -19,6 +19,6 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off"  // You can disable if using React 17+
+    "react/react-in-jsx-scope": "off"
   }
 }
